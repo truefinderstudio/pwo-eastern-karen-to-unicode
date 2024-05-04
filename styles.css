@@ -99,7 +99,7 @@ button {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: black; /* Default light mode background color */
+    background-color: #0074d9; /* Default light mode background color */
     border-radius: 34px;
     transition: background-color 0.4s; /* Smooth transition for color change */
 }
@@ -155,7 +155,7 @@ footer {
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
-    background-color: #b78e01; /* A light gray background for contrast */
+    background-color: #000; /* A light gray background for contrast */
     border-top: 1px solid #ccc; /* A subtle border on top */
     margin-top: 20px; /* Provides a bit of spacing from the content above */
 }
