@@ -1,0 +1,161 @@
+/* Basic styling for the body to ensure the page looks neat and centered */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+/* Header styling for a clean and centered title */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Container for the input and output areas, including buttons */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding-bottom: 60px; /* Adds extra space at the bottom for better separation */
+}
+
+/* Styling for textareas to maintain consistency and readability */
+textarea {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Buttons styled for usability and aesthetic alignment with the rest of the page */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f8f8f8; /* Light grey background for neutral appearance */
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for hover effects */
+    font-size: 16px; /* Slightly larger font for better readability */
+    color: white; /* White text for high contrast */
+}
+
+#convertButton {
+    background-color: #ff4136; /* Cool red color */
+}
+
+#convertButton:hover {
+    background-color: #e82c20; /* Darker red on hover */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+}
+
+#copyButton {
+    background-color: #0074d9; /* Cool blue color */
+}
+
+#copyButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+}
+
+/* Fixed positioning for the theme toggle switch to allow easy access */
+.theme-switch-wrapper {
+    position: fixed;
+    bottom: 20px;  /* Positioned 20px from the bottom to avoid cutting off */
+    right: 20px;   /* Positioned 20px from the right for consistency */
+    z-index: 1000;
+}
+
+/* Styling for the toggle switch itself, ensuring it is clickable and visually pleasing */
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider aesthetics with color transitions for interactive feel */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black; /* Default light mode background color */
+    border-radius: 34px;
+    transition: background-color 0.4s; /* Smooth transition for color change */
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s; /* Smooth movement transition */
+}
+
+/* Icon adjustments to ensure they appear only when appropriate and are well-positioned */
+.icon {
+    display: none; /* Start icons as hidden */
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    z-index: 5; /* Ensures icons are above the slider background */
+}
+
+/* Color logic for dark mode using class toggled by JavaScript */
+.dark-theme .slider {
+    background-color: #b50101; /* Dark mode slider color */
+}
+
+input:checked + .slider .dark,
+input:not(:checked) + .slider .light {
+    display: block; /* Show icon appropriate for the theme */
+}
+
+input:checked + .slider .light,
+input:not(:checked) + .slider .dark {
+    display: none; /* Hide icon not appropriate for the current theme */
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+.dark-theme textarea, .dark-theme button {
+    border-color: white;
+}
+footer {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    background-color: #b78e01; /* A light gray background for contrast */
+    border-top: 1px solid #ccc; /* A subtle border on top */
+    margin-top: 20px; /* Provides a bit of spacing from the content above */
+}
