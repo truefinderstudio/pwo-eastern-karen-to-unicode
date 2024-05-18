@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'OutputFont';
     src: url('https://pwo-eastern-karen-to-unicode.truefinderstudio.com/fonts/NotoSans.woff2') format('woff2'),
-         url('https://pwo-eastern-karen-to-unicode.truefinderstudio.com/NotoSans.woff') format('woff');
+         url('https://pwo-eastern-karen-to-unicode.truefinderstudio.com/fonts/NotoSans.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
